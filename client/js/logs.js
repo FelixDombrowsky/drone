@@ -9,8 +9,8 @@ window.onload = async () => {
    const droneId = config.drone_id;
  
    try {
-     // ดึงข้อมูล log ของ drone ที่มี drone_id นี้จาก Server
-     const response = await fetch(`http://localhost:8000/logs/${droneId}`);
+     // ดึงข้อมูล log ของ drone ที่มี drone_id นี้จาก Server  http://localhost:8000/logs/${droneId}
+     const response = await fetch(`https://drone-i8ji.onrender.com/logs/${droneId}`);
      const logs = await response.json();
  
      // จัดเรียง log ตามเวลา created ล่าสุดขึ้นก่อน

@@ -1,13 +1,13 @@
 async function getDroneConfigFromEnv() {
    try {
-      // Get DRONE_ID from Server (.env)
-      const envRes = await fetch('http://localhost:8000/env');
+      // Get DRONE_ID from Server (.env)  http://localhost:8000/env
+      const envRes = await fetch('https://drone-i8ji.onrender.com/env');
       const envData = await envRes.json() 
       const droneID = envData.droneId;
       console.log(droneID)
 
-      // API Config Drone
-      const configRes = await fetch(`http://localhost:8000/configs/${droneID}`)
+      // API Config Drone  http://localhost:8000/configs/${droneID}
+      const configRes = await fetch(`https://drone-i8ji.onrender.com/configs/${droneID}`)
       const config = await configRes.json();
       console.log(config)
 

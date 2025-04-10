@@ -24,9 +24,9 @@ window.onload = () => {
        return;
      }
  
-     // ส่งข้อมูลไปยัง API
+     // ส่งข้อมูลไปยัง API http://localhost:8000/logs
      try {
-       const response = await fetch("http://localhost:8000/logs", {
+       const response = await fetch("https://drone-i8ji.onrender.com/logs", {
          method: "POST",
          headers: {
            "Content-Type": "application/json"
